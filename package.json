@@ -1,0 +1,36 @@
+{
+	"name": "nestjs-bot-framework",
+	"version": "1.0.0",
+	"description": "TODO",
+	"main": "index.ts",
+	"scripts": {
+		"test": "mocha -r ts-node/register test/**"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hoersamu/nestjs-bot-framework.git"
+	},
+	"author": "hoersamu",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/hoersamu/nestjs-bot-framework/issues"
+	},
+	"homepage": "https://github.com/hoersamu/nestjs-bot-framework#readme",
+	"dependencies": {
+		"@nestjs-plus/discovery": "^2.0.1",
+		"@nestjs/common": "^6.5.3",
+		"@nestjs/core": "^6.5.3",
+		"discord.js": "^12.5.1",
+		"reflect-metadata": "^0.1.13",
+		"rxjs": "^6.6.3"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.2.14",
+		"@types/mocha": "^8.2.0",
+		"@types/node": "^12.7.2",
+		"chai": "^4.2.0",
+		"mocha": "^8.2.1",
+		"ts-node": "^9.1.1",
+		"typescript": "^4.1.3"
+	}
+}
