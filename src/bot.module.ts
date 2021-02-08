@@ -1,35 +1,37 @@
-import { DiscoveryModule } from '@nestjs-plus/discovery';
-import { DynamicModule, Global, Module, Provider } from '@nestjs/common';
-import { ModuleRef } from '@nestjs/core';
-import { BotCommandService } from './bot-command.service';
-import { BotEventService } from './bot-event.service';
-import { BotOptions } from './bot.config';
-import { BOT_CLIENT, BOT_INSTANCE, BOT_OPTIONS } from './bot.constants';
-import { BotInstance, DiscordInstance } from './bot.instance';
+import { DiscoveryModule } from "@nestjs-plus/discovery";
+import { DynamicModule, Global, Module } from "@nestjs/common";
+import { ModuleRef } from "@nestjs/core";
+import { BotCommandService } from "./bot-command.service";
+import { BotEventService } from "./bot-event.service";
+import { BotOptions } from "./bot.config";
+import { BOT_CLIENT, BOT_INSTANCE, BOT_OPTIONS } from "./bot.constants";
+import { BotInstance, DiscordInstance } from "./bot.instance";
+
+export const connectionFactory = {
+	provide: BOT_CLIENT,
+	useFactory: async (discordInstance: DiscordInstance) => {
+		return discordInstance.createClient();
+	},
+	inject: [DiscordInstance],
+};
 
 @Global()
 @Module({ imports: [DiscoveryModule] })
 export class BotModule {
 	static forRoot(options: BotOptions): DynamicModule {
-		const instance = new DiscordInstance();
-
-		instance.createClient(options);
-
-		const providers: Provider[] = [
-			{ provide: BOT_OPTIONS, useValue: options || {} },
-			{
-				provide: BOT_CLIENT,
-				useFactory: () => instance.client
-			},
-			{ provide: BOT_INSTANCE, useValue: instance },
-			BotCommandService,
-			BotEventService
-		];
-
 		return {
 			module: BotModule,
-			providers: providers,
-			exports: providers
+			providers: [
+				{ provide: BOT_OPTIONS, useValue: options },
+				//connectionFactory,
+				DiscordInstance,
+				BotCommandService,
+				BotEventService,
+			],
+			exports: [
+				//{ provide: BOT_CLIENT, useExisting: connectionFactory },
+				//{ provide: BOT_INSTANCE, useClass: DiscordInstance },
+			],
 		};
 	}
 
