@@ -1,1 +1,1 @@
-# nestjs-bot-framework
+# nestjs-discord-framework

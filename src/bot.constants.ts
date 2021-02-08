@@ -1,8 +1,5 @@
-export const BOT_OPTIONS = "NB_BOT_OPTIONS";
-export const BOT_CLIENT = "NB_BOT_CLIENT";
-export const BOT_INSTANCE = "NB_BOT_INSTANCE";
-
-export const BOT_HANDLER_CLASS = "DISCORD_BOT_HANDLER";
-export const BOT_COMMAND_NAME = "DISCORD_BOT_COMMAND_NAME";
-
-export const BOT_EVENT = "DISCORD_BOT_EVENT_HANDLER";
+export const BOT_CLIENT = 'BOT_CLIENT';
+export const BOT_INSTANCE = 'BOT_INSTANCE';
+export const BOT_OPTIONS = 'BOT_OPTIONS';
+export const BOT_COMMAND = 'BOT_COMMAND';
+export const BOT_EVENT = 'BOT_EVENT';
