@@ -1,7 +1,7 @@
 {
 	"name": "nestjs-discord-framework",
 	"version": "1.0.0",
-	"description": "TODO",
+	"description": "Simple Framework to help integrate Discord bots with Nestjs Servers",
 	"main": "index.ts",
 	"scripts": {
 		"test": "jest",
