@@ -24,7 +24,7 @@ export class BotCommandService {
 
   handle(message: Message) {
     if (message.content.startsWith(this.prefix)) {
-      const command = message.content.split(' ')[0];
+      const command = message.content.split(' ')[0].substr(this.prefix.length);
       this.commands[command]?.forEach((handler) => handler(message));
     }
   }
