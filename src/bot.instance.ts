@@ -14,9 +14,7 @@ export class BotInstance implements ITestService {
   private _discordClient: Client;
   private logger = new Logger('Bot');
 
-  constructor(@Inject(BOT_OPTIONS) private _options: BotOptions) {
-    if (!_options.timeout) _options.timeout = 10000;
-  }
+  constructor(@Inject(BOT_OPTIONS) private _options: BotOptions) {}
 
   connect(): Client {
     return this._discordClient

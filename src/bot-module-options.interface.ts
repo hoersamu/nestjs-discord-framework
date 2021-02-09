@@ -3,7 +3,6 @@ import { ClientOptions } from 'discord.js';
 
 export interface BotOptions extends ClientOptions {
   token: string;
-  timeout?: number;
   prefix?: string;
 }
 
