@@ -23,11 +23,11 @@ $ npm i --save nestjs-discord-framework
 
 ### Usage
 
-> Version 1.0.0 is not supported and should be upgraded to the v2.x as soon as possible.
+> Version 1.0.0 is not supported and should be upgraded to v2.x immediately.
 
-To use just import the `BotModule` in the root `AppModule` and supply the options.
-The `forRoot()` method supports all the [Discord.JS ClientOptions](https://discord.js.org/#/docs/main/stable/typedef/ClientOptions).
-In addition there are some extra conviguration properties described below:
+To use the Framework just import the `BotModule` in the root `AppModule` and supply the options.
+The `forRoot()` method supports all the Discord.JS [ClientOptions](https://discord.js.org/#/docs/main/stable/typedef/ClientOptions).
+In addition there are some extra configuration properties described below:
 
 | Key      | Description                   |
 | -------- | ----------------------------- |
