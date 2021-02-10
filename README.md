@@ -9,8 +9,8 @@
   <p align="center">
   <a href="https://www.npmjs.com/package/nestjs-discord-framework"><img src="https://img.shields.io/npm/v/nestjs-discord-framework"/></a>
   <a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-brightgreen.svg"/></a>
-  <a href="https://dependabot.com"><img src="https://api.dependabot.com/badges/status?host=github&repo=hoersamu/nestjs-discord-framework"/></a>
   <a href="https://snyk.io/test/github/hoersamu/nestjs-discord-framework?targetFile=package.json"><img src="https://snyk.io/test/github/hoersamu/nestjs-discord-framework/badge.svg?targetFile=package.json"/></a>
+  <img src="https://github.com/hoersamu/nestjs-discord-framework/workflows/CodeQL/badge.svg"/>
 </p>
 <p align="center">
 </p>
